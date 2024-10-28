@@ -21,22 +21,50 @@
       go full screen (e.g. by hitting "f").
     </div>
     -->
-    <textarea id="source">class: title, self-paced
+    <textarea id="source">## Navigation Instructions
 
-Kubernetes<br/>for administrators<br/>and operators<br/>
+## How to Navigate the Slides
 
-.nav[*Self-paced version*]
+- **Use the Spacebar**: Advance to the next slide
+- **Use Arrow Keys**: 
+  - Right Arrow → Next Slide
+  - Left Arrow ← Previous Slide
 
 .debug[
 ```
+?? slides/containers/credit.md
+?? slides/containers/introduction.md
 ?? slides/imie.yml
+?? slides/shared/navigation.md
 
 ```
 
 These slides have been built from commit: 6105b579
 
 
-[shared/title.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/shared/title.md)]
+[shared/navigation.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/shared/navigation.md)]
+---
+## Welcome to Kubernetes Training!
+
+## Meet Your Instructor: Achraf ELAFRIT
+
+### DevOps Expert
+- **Experience:** Over 7 years in infrastructure development
+- **Expertise:** Specializing in Kubernetes, CI/CD, and cloud technologies
+
+### Connect with Me
+- [LinkedIn](https://www.linkedin.com/in/achrafelafrit/)
+- [GitHub](https://github.com/FractalDesigns)
+
+.debug[[containers/introduction.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/containers/introduction.md)]
+---
+class: title, self-paced
+
+Kubernetes<br/>for administrators<br/>and operators<br/>
+
+.nav[*Self-paced version*]
+
+.debug[[shared/title.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/shared/title.md)]
 ---
 
 class: title, in-person
@@ -134,6 +162,13 @@ name: toc-part-4
 - [Buildkit](#toc-buildkit)
 - [Init systems and PID 1](#toc-init-systems-and-pid-)
 - [Application Configuration](#toc-application-configuration)
+
+.debug[(auto-generated TOC)]
+---
+name: toc-part-5
+
+## Part 5
+
 - [Logging](#toc-logging)
 - [Deep dive into container internals](#toc-deep-dive-into-container-internals)
 - [Control groups](#toc-control-groups)
@@ -148,9 +183,9 @@ name: toc-part-4
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-5
+name: toc-part-6
 
-## Part 5
+## Part 6
 
 - [Pre-requirements](#toc-pre-requirements)
 
@@ -167,9 +202,9 @@ name: toc-part-5
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-6
+name: toc-part-7
 
-## Part 6
+## Part 7
 
 - [Building our own cluster (medium)](#toc-building-our-own-cluster-medium)
 
@@ -186,9 +221,9 @@ name: toc-part-6
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-7
+name: toc-part-8
 
-## Part 7
+## Part 8
 
 - [API server availability](#toc-api-server-availability)
 
@@ -207,9 +242,9 @@ name: toc-part-7
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-8
+name: toc-part-9
 
-## Part 8
+## Part 9
 
 - [Backing up clusters](#toc-backing-up-clusters)
 
@@ -220,9 +255,9 @@ name: toc-part-8
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-9
+name: toc-part-10
 
-## Part 9
+## Part 10
 
 - [Deploying a sample application](#toc-deploying-a-sample-application)
 
@@ -239,9 +274,9 @@ name: toc-part-9
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-10
+name: toc-part-11
 
-## Part 10
+## Part 11
 
 - [OpenID Connect](#toc-openid-connect)
 
@@ -258,9 +293,9 @@ name: toc-part-10
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-11
+name: toc-part-12
 
-## Part 11
+## Part 12
 
 - [Resource Limits](#toc-resource-limits)
 
@@ -281,9 +316,9 @@ name: toc-part-11
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-12
+name: toc-part-13
 
-## Part 12
+## Part 13
 
 - [Collecting metrics with Prometheus](#toc-collecting-metrics-with-prometheus)
 
@@ -302,9 +337,9 @@ name: toc-part-12
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-13
+name: toc-part-14
 
-## Part 13
+## Part 14
 
 - [Last words](#toc-last-words)
 
@@ -315,9 +350,9 @@ name: toc-part-13
 
 .debug[(auto-generated TOC)]
 ---
-name: toc-part-14
+name: toc-part-15
 
-## Part 14
+## Part 15
 
 - [Volumes](#toc-volumes)
 
@@ -337,53 +372,19 @@ name: toc-part-14
 
 
 .debug[(auto-generated TOC)]
+---
+name: toc-part-16
+
+## Part 16
+
+- [Resources](#toc-resources)
+
+
+.debug[(auto-generated TOC)]
 
 
 
 .debug[[shared/toc.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/shared/toc.md)]
----
-## A brief introduction
-
-- This was initially written to support in-person, instructor-led workshops and tutorials
-
-- These materials are maintained by [Jérôme Petazzoni](https://twitter.com/jpetazzo) and [multiple contributors](https:///graphs/contributors)
-
-- You can also follow along on your own, at your own pace
-
-- We included as much information as possible in these slides
-
-- We recommend having a mentor to help you ...
-
-- ... Or be comfortable spending some time reading the Docker
- [documentation](https://docs.docker.com/) ...
-
-- ... And looking for answers in the [Docker forums](https://forums.docker.com),
-  [StackOverflow](http://stackoverflow.com/questions/tagged/docker),
-  and other outlets
-
-.debug[[containers/intro.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/containers/intro.md)]
----
-
-class: self-paced
-
-## Hands on, you shall practice
-
-- Nobody ever became a Jedi by spending their lives reading Wookiepedia
-
-- Likewise, it will take more than merely *reading* these slides
-  to make you an expert
-
-- These slides include *tons* of demos, exercises, and examples
-
-- They assume that you have access to a machine running Docker
-
-- If you are attending a workshop or tutorial:
-  <br/>you will be given specific instructions to access a cloud VM
-
-- If you are doing this on your own:
-  <br/>we will tell you how to install Docker or access a Docker environment
-
-.debug[[containers/intro.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/containers/intro.md)]
 ---
 
 class: pic
@@ -10156,7 +10157,7 @@ class: title
 .nav[
 [Previous part](#toc-application-configuration)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-deep-dive-into-container-internals)
 ]
@@ -10496,7 +10497,7 @@ class: title
 .nav[
 [Previous part](#toc-logging)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-control-groups)
 ]
@@ -10554,7 +10555,7 @@ class: title
 .nav[
 [Previous part](#toc-deep-dive-into-container-internals)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-namespaces)
 ]
@@ -11023,7 +11024,7 @@ class: title
 .nav[
 [Previous part](#toc-control-groups)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-security-features)
 ]
@@ -11687,7 +11688,7 @@ class: title
 .nav[
 [Previous part](#toc-namespaces)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-copy-on-write-filesystems)
 ]
@@ -11823,7 +11824,7 @@ class: title
 .nav[
 [Previous part](#toc-security-features)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-building-containers-from-scratch)
 ]
@@ -12212,7 +12213,7 @@ class: title
 .nav[
 [Previous part](#toc-copy-on-write-filesystems)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-docker-engine-and-other-container-engines)
 ]
@@ -12240,7 +12241,7 @@ class: title
 .nav[
 [Previous part](#toc-building-containers-from-scratch)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-container-super-structure)
 ]
@@ -12469,7 +12470,7 @@ class: title
 .nav[
 [Previous part](#toc-docker-engine-and-other-container-engines)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-the-container-ecosystem)
 ]
@@ -12544,7 +12545,7 @@ class: title
 .nav[
 [Previous part](#toc-container-super-structure)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-orchestration-an-overview)
 ]
@@ -12753,7 +12754,7 @@ class: title
 .nav[
 [Previous part](#toc-the-container-ecosystem)
 |
-[Back to table of contents](#toc-part-4)
+[Back to table of contents](#toc-part-5)
 |
 [Next part](#toc-pre-requirements)
 ]
@@ -13251,7 +13252,7 @@ class: title
 .nav[
 [Previous part](#toc-orchestration-an-overview)
 |
-[Back to table of contents](#toc-part-5)
+[Back to table of contents](#toc-part-6)
 |
 [Next part](#toc-kubernetes-architecture)
 ]
@@ -13468,7 +13469,7 @@ class: title
 .nav[
 [Previous part](#toc-pre-requirements)
 |
-[Back to table of contents](#toc-part-5)
+[Back to table of contents](#toc-part-6)
 |
 [Next part](#toc-the-kubernetes-api)
 ]
@@ -13663,7 +13664,7 @@ class: title
 .nav[
 [Previous part](#toc-kubernetes-architecture)
 |
-[Back to table of contents](#toc-part-5)
+[Back to table of contents](#toc-part-6)
 |
 [Next part](#toc-other-control-plane-components)
 ]
@@ -13960,7 +13961,7 @@ class: title
 .nav[
 [Previous part](#toc-the-kubernetes-api)
 |
-[Back to table of contents](#toc-part-5)
+[Back to table of contents](#toc-part-6)
 |
 [Next part](#toc-kubernetes-internal-apis)
 ]
@@ -14041,7 +14042,7 @@ class: title
 .nav[
 [Previous part](#toc-other-control-plane-components)
 |
-[Back to table of contents](#toc-part-5)
+[Back to table of contents](#toc-part-6)
 |
 [Next part](#toc-building-our-own-cluster-easy)
 ]
@@ -14313,7 +14314,7 @@ class: title
 .nav[
 [Previous part](#toc-kubernetes-internal-apis)
 |
-[Back to table of contents](#toc-part-5)
+[Back to table of contents](#toc-part-6)
 |
 [Next part](#toc-building-our-own-cluster-medium)
 ]
@@ -15263,7 +15264,7 @@ class: title
 .nav[
 [Previous part](#toc-building-our-own-cluster-easy)
 |
-[Back to table of contents](#toc-part-6)
+[Back to table of contents](#toc-part-7)
 |
 [Next part](#toc-building-our-own-cluster-hard)
 ]
@@ -16223,7 +16224,7 @@ class: title
 .nav[
 [Previous part](#toc-building-our-own-cluster-medium)
 |
-[Back to table of contents](#toc-part-6)
+[Back to table of contents](#toc-part-7)
 |
 [Next part](#toc-adding-nodes-to-the-cluster)
 ]
@@ -16665,7 +16666,7 @@ class: title
 .nav[
 [Previous part](#toc-building-our-own-cluster-hard)
 |
-[Back to table of contents](#toc-part-6)
+[Back to table of contents](#toc-part-7)
 |
 [Next part](#toc-the-container-network-interface)
 ]
@@ -17259,7 +17260,7 @@ class: title
 .nav[
 [Previous part](#toc-adding-nodes-to-the-cluster)
 |
-[Back to table of contents](#toc-part-6)
+[Back to table of contents](#toc-part-7)
 |
 [Next part](#toc-cni-internals)
 ]
@@ -17894,7 +17895,7 @@ class: title
 .nav[
 [Previous part](#toc-the-container-network-interface)
 |
-[Back to table of contents](#toc-part-6)
+[Back to table of contents](#toc-part-7)
 |
 [Next part](#toc-interconnecting-clusters)
 ]
@@ -18123,7 +18124,7 @@ class: title
 .nav[
 [Previous part](#toc-cni-internals)
 |
-[Back to table of contents](#toc-part-6)
+[Back to table of contents](#toc-part-7)
 |
 [Next part](#toc-api-server-availability)
 ]
@@ -18319,7 +18320,7 @@ class: title
 .nav[
 [Previous part](#toc-interconnecting-clusters)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-setting-up-kubernetes)
 ]
@@ -18444,7 +18445,7 @@ class: title
 .nav[
 [Previous part](#toc-api-server-availability)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-running-a-local-development-cluster)
 ]
@@ -18705,7 +18706,7 @@ class: title
 .nav[
 [Previous part](#toc-setting-up-kubernetes)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-deploying-a-managed-cluster)
 ]
@@ -18946,7 +18947,7 @@ class: title
 .nav[
 [Previous part](#toc-running-a-local-development-cluster)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-kubernetes-distributions-and-installers)
 ]
@@ -19391,7 +19392,7 @@ class: title
 .nav[
 [Previous part](#toc-deploying-a-managed-cluster)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-upgrading-clusters)
 ]
@@ -19555,7 +19556,7 @@ class: title
 .nav[
 [Previous part](#toc-kubernetes-distributions-and-installers)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-static-pods)
 ]
@@ -20219,7 +20220,7 @@ class: title
 .nav[
 [Previous part](#toc-upgrading-clusters)
 |
-[Back to table of contents](#toc-part-7)
+[Back to table of contents](#toc-part-8)
 |
 [Next part](#toc-backing-up-clusters)
 ]
@@ -20503,7 +20504,7 @@ class: title
 .nav[
 [Previous part](#toc-static-pods)
 |
-[Back to table of contents](#toc-part-8)
+[Back to table of contents](#toc-part-9)
 |
 [Next part](#toc-the-cloud-controller-manager)
 ]
@@ -20922,7 +20923,7 @@ class: title
 .nav[
 [Previous part](#toc-backing-up-clusters)
 |
-[Back to table of contents](#toc-part-8)
+[Back to table of contents](#toc-part-9)
 |
 [Next part](#toc-healthchecks)
 ]
@@ -21105,7 +21106,7 @@ class: title
 .nav[
 [Previous part](#toc-the-cloud-controller-manager)
 |
-[Back to table of contents](#toc-part-8)
+[Back to table of contents](#toc-part-9)
 |
 [Next part](#toc-deploying-a-sample-application)
 ]
@@ -22037,7 +22038,7 @@ class: title
 .nav[
 [Previous part](#toc-healthchecks)
 |
-[Back to table of contents](#toc-part-9)
+[Back to table of contents](#toc-part-10)
 |
 [Next part](#toc-accessing-logs-from-the-cli)
 ]
@@ -22318,7 +22319,7 @@ class: title
 .nav[
 [Previous part](#toc-deploying-a-sample-application)
 |
-[Back to table of contents](#toc-part-9)
+[Back to table of contents](#toc-part-10)
 |
 [Next part](#toc-centralized-logging)
 ]
@@ -22514,7 +22515,7 @@ class: title
 .nav[
 [Previous part](#toc-accessing-logs-from-the-cli)
 |
-[Back to table of contents](#toc-part-9)
+[Back to table of contents](#toc-part-10)
 |
 [Next part](#toc-authentication-and-authorization)
 ]
@@ -22699,7 +22700,7 @@ class: title
 .nav[
 [Previous part](#toc-centralized-logging)
 |
-[Back to table of contents](#toc-part-9)
+[Back to table of contents](#toc-part-10)
 |
 [Next part](#toc-generating-user-certificates)
 ]
@@ -23801,7 +23802,7 @@ class: title
 .nav[
 [Previous part](#toc-authentication-and-authorization)
 |
-[Back to table of contents](#toc-part-9)
+[Back to table of contents](#toc-part-10)
 |
 [Next part](#toc-the-csr-api)
 ]
@@ -24054,7 +24055,7 @@ class: title
 .nav[
 [Previous part](#toc-generating-user-certificates)
 |
-[Back to table of contents](#toc-part-9)
+[Back to table of contents](#toc-part-10)
 |
 [Next part](#toc-openid-connect)
 ]
@@ -24584,7 +24585,7 @@ class: title
 .nav[
 [Previous part](#toc-the-csr-api)
 |
-[Back to table of contents](#toc-part-10)
+[Back to table of contents](#toc-part-11)
 |
 [Next part](#toc-securing-the-control-plane)
 ]
@@ -25011,7 +25012,7 @@ class: title
 .nav[
 [Previous part](#toc-openid-connect)
 |
-[Back to table of contents](#toc-part-10)
+[Back to table of contents](#toc-part-11)
 |
 [Next part](#toc-network-policies)
 ]
@@ -25364,7 +25365,7 @@ class: title
 .nav[
 [Previous part](#toc-securing-the-control-plane)
 |
-[Back to table of contents](#toc-part-10)
+[Back to table of contents](#toc-part-11)
 |
 [Next part](#toc-restricting-pod-permissions)
 ]
@@ -25880,7 +25881,7 @@ class: title
 .nav[
 [Previous part](#toc-network-policies)
 |
-[Back to table of contents](#toc-part-10)
+[Back to table of contents](#toc-part-11)
 |
 [Next part](#toc-pod-security-policies)
 ]
@@ -26121,7 +26122,7 @@ class: title
 .nav[
 [Previous part](#toc-restricting-pod-permissions)
 |
-[Back to table of contents](#toc-part-10)
+[Back to table of contents](#toc-part-11)
 |
 [Next part](#toc-pod-security-admission)
 ]
@@ -26592,7 +26593,7 @@ class: title
 .nav[
 [Previous part](#toc-pod-security-policies)
 |
-[Back to table of contents](#toc-part-10)
+[Back to table of contents](#toc-part-11)
 |
 [Next part](#toc-resource-limits)
 ]
@@ -26886,7 +26887,7 @@ class: title
 .nav[
 [Previous part](#toc-pod-security-admission)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-defining-min-max-and-default-resources)
 ]
@@ -27470,7 +27471,7 @@ class: title
 .nav[
 [Previous part](#toc-resource-limits)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-namespace-quotas)
 ]
@@ -27570,7 +27571,7 @@ class: title
 .nav[
 [Previous part](#toc-defining-min-max-and-default-resources)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-limiting-resources-in-practice)
 ]
@@ -27770,7 +27771,7 @@ class: title
 .nav[
 [Previous part](#toc-namespace-quotas)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-checking-node-and-pod-resource-usage)
 ]
@@ -27937,7 +27938,7 @@ class: title
 .nav[
 [Previous part](#toc-limiting-resources-in-practice)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-cluster-sizing)
 ]
@@ -28172,7 +28173,7 @@ class: title
 .nav[
 [Previous part](#toc-checking-node-and-pod-resource-usage)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-disruptions)
 ]
@@ -28385,7 +28386,7 @@ class: title
 .nav[
 [Previous part](#toc-cluster-sizing)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-the-horizontal-pod-autoscaler)
 ]
@@ -28963,7 +28964,7 @@ class: title
 .nav[
 [Previous part](#toc-disruptions)
 |
-[Back to table of contents](#toc-part-11)
+[Back to table of contents](#toc-part-12)
 |
 [Next part](#toc-collecting-metrics-with-prometheus)
 ]
@@ -29314,7 +29315,7 @@ class: title
 .nav[
 [Previous part](#toc-the-horizontal-pod-autoscaler)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-extending-the-kubernetes-api)
 ]
@@ -29940,7 +29941,7 @@ class: title
 .nav[
 [Previous part](#toc-collecting-metrics-with-prometheus)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-custom-resource-definitions)
 ]
@@ -30344,7 +30345,7 @@ class: title
 .nav[
 [Previous part](#toc-extending-the-kubernetes-api)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-operators)
 ]
@@ -30923,7 +30924,7 @@ class: title
 .nav[
 [Previous part](#toc-custom-resource-definitions)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-an-elasticsearch-operator)
 ]
@@ -31088,7 +31089,7 @@ class: title
 .nav[
 [Previous part](#toc-operators)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-designing-an-operator)
 ]
@@ -31587,7 +31588,7 @@ class: title
 .nav[
 [Previous part](#toc-an-elasticsearch-operator)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-writing-a-tiny-operator)
 ]
@@ -32034,7 +32035,7 @@ class: title
 .nav[
 [Previous part](#toc-designing-an-operator)
 |
-[Back to table of contents](#toc-part-12)
+[Back to table of contents](#toc-part-13)
 |
 [Next part](#toc-last-words)
 ]
@@ -32226,7 +32227,7 @@ class: title
 .nav[
 [Previous part](#toc-writing-a-tiny-operator)
 |
-[Back to table of contents](#toc-part-13)
+[Back to table of contents](#toc-part-14)
 |
 [Next part](#toc-links-and-resources)
 ]
@@ -32488,7 +32489,7 @@ class: title
 .nav[
 [Previous part](#toc-last-words)
 |
-[Back to table of contents](#toc-part-13)
+[Back to table of contents](#toc-part-14)
 |
 [Next part](#toc-all-content-after-this-slide-is-bonus-material)
 ]
@@ -32549,7 +32550,7 @@ class: title
 .nav[
 [Previous part](#toc-links-and-resources)
 |
-[Back to table of contents](#toc-part-13)
+[Back to table of contents](#toc-part-14)
 |
 [Next part](#toc-volumes)
 ]
@@ -32576,7 +32577,7 @@ class: title
 .nav[
 [Previous part](#toc-all-content-after-this-slide-is-bonus-material)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-managing-configuration)
 ]
@@ -33103,7 +33104,7 @@ class: title
 .nav[
 [Previous part](#toc-volumes)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-managing-secrets)
 ]
@@ -33776,7 +33777,7 @@ class: title
 .nav[
 [Previous part](#toc-managing-configuration)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-stateful-sets)
 ]
@@ -34104,7 +34105,7 @@ class: title
 .nav[
 [Previous part](#toc-managing-secrets)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-running-a-consul-cluster)
 ]
@@ -34350,7 +34351,7 @@ class: title
 .nav[
 [Previous part](#toc-stateful-sets)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-pv-pvc-and-storage-classes)
 ]
@@ -34615,7 +34616,7 @@ class: title
 .nav[
 [Previous part](#toc-running-a-consul-cluster)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-openebs-)
 ]
@@ -35334,7 +35335,7 @@ class: title
 .nav[
 [Previous part](#toc-pv-pvc-and-storage-classes)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
 [Next part](#toc-stateful-failover)
 ]
@@ -35735,9 +35736,9 @@ class: title
 .nav[
 [Previous part](#toc-openebs-)
 |
-[Back to table of contents](#toc-part-14)
+[Back to table of contents](#toc-part-15)
 |
-[Next part](#toc-)
+[Next part](#toc-resources)
 ]
 
 .debug[(automatically generated title slide)]
@@ -36274,7 +36275,58 @@ and we failed the node after 30 seconds, we should have about 2400 row in that t
 :FR:- Utilisation de volumes à haute disponibilité
 :FR:- Exemple : déployer une base de données survivant à la défaillance d'un nœud
 
-.debug[[k8s/stateful-failover.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/k8s/stateful-failover.md)]</textarea>
+.debug[[k8s/stateful-failover.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/k8s/stateful-failover.md)]
+---
+
+class: pic
+
+.interstitial[![Image separating from the next part](https://prettypictures.container.training/containers/plastic-containers.JPG)]
+
+---
+
+name: toc-resources
+class: title
+
+ Resources
+
+.nav[
+[Previous part](#toc-stateful-failover)
+|
+[Back to table of contents](#toc-part-16)
+|
+[Next part](#toc-)
+]
+
+.debug[(automatically generated title slide)]
+
+---
+# Resources
+
+- Container training by Jérôme Petazzoni
+
+- Burns, B., Beda, J., &amp; Hightower, K. (2019). Kubernetes: Up and Running: Dive into the Future of Infrastructure
+(2nd ed.). O&#39;Reilly Media.
+
+- Poulton, N. (2020). The Kubernetes Book: Version 2020 with 40 pages of updates. Independently published.
+
+- Luksa, M. (2018). Kubernetes in Action. Manning Publications.
+
+- Sayfan, G. (2018). Mastering Kubernetes: Master the art of container management by using the power of
+Kubernetes (2nd ed.). Packt Publishing.
+
+---
+- Hausenblas, M., &amp; Schimanski, S. (2019). Programming Kubernetes: Developing Cloud-Native Applications.
+O&#39;Reilly Media.
+
+- Ibryam, B., &amp; Huß, R. (2019). Kubernetes Patterns: Reusable Elements for Designing Cloud-Native
+Applications. O&#39;Reilly Media.
+
+- Arundel, J., &amp; Domingus, J. (2019). Cloud Native DevOps with Kubernetes: Building, Deploying, and Scaling
+Modern Applications in the Cloud. O&#39;Reilly Media.
+
+- Saha, P. (2018). Kubernetes Security: Implementing Security Best Practices. Packt Publishing.
+
+.debug[[containers/credit.md](https://github.com/jpetazzo/container.training.git/tree/main/slides/containers/credit.md)]</textarea>
     <script src="remark.min.js" type="text/javascript">
     </script>
     <script type="text/javascript">
